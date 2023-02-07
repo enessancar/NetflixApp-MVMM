@@ -21,12 +21,10 @@ class MainTabBarController: UITabBarController {
         let vc3 = UINavigationController(rootViewController: SearchViewController())
         let vc4 = UINavigationController(rootViewController: HomeViewController())
         
-        guard let items = self.tabBar.items else { return }
-        let images = ["house", "play.circle", "magnifyingglass", "arrow.down.circle"]
-        
-        for x in 0...(images.count) {
-            items[x].image = UIImage(systemName: images[x])
-        }
+        vc1.tabBarItem.image = UIImage(systemName: "house")
+        vc2.tabBarItem.image = UIImage(systemName: "play.circle")
+        vc3.tabBarItem.image = UIImage(systemName: "magnifyingglass")
+        vc4.tabBarItem.image = UIImage(systemName: "arrow.down.to.line")
         
         vc1.title = "Home"
         vc2.title = "Coming Soon"

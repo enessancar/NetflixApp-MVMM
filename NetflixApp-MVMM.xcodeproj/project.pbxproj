@@ -16,6 +16,11 @@
 		EC79DF962991671E0089DF03 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79DF952991671E0089DF03 /* UpcomingViewController.swift */; };
 		EC79DF98299167300089DF03 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79DF97299167300089DF03 /* SearchViewController.swift */; };
 		EC79DF9A299167510089DF03 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79DF99299167510089DF03 /* DownloadViewController.swift */; };
+		EC79DF9D2991AA800089DF03 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC79DF9C2991AA800089DF03 /* SnapKit */; };
+		EC79DFA02991B3270089DF03 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79DF9F2991B3270089DF03 /* CollectionViewTableViewCell.swift */; };
+		EC79DFA2299245D40089DF03 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79DFA1299245D40089DF03 /* CGFloat+Extension.swift */; };
+		EC79DFA4299258260089DF03 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79DFA3299258260089DF03 /* MovieCollectionViewCell.swift */; };
+		EC79DFA7299266260089DF03 /* MainHeroHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79DFA6299266260089DF03 /* MainHeroHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,10 @@
 		EC79DF952991671E0089DF03 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		EC79DF97299167300089DF03 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EC79DF99299167510089DF03 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		EC79DF9F2991B3270089DF03 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		EC79DFA1299245D40089DF03 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		EC79DFA3299258260089DF03 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC79DFA6299266260089DF03 /* MainHeroHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeroHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC79DF9D2991AA800089DF03 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +118,7 @@
 		EC79DF8D299165850089DF03 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EC79DFA1299245D40089DF03 /* CGFloat+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -127,6 +138,8 @@
 		EC79DF8F299166BA0089DF03 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				EC79DFA5299266030089DF03 /* Views */,
+				EC79DF9E2991B2E50089DF03 /* Cell */,
 				EC79DF93299167050089DF03 /* HomeViewController.swift */,
 			);
 			path = HomeVC;
@@ -156,6 +169,23 @@
 			path = DownloadVC;
 			sourceTree = "<group>";
 		};
+		EC79DF9E2991B2E50089DF03 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EC79DF9F2991B3270089DF03 /* CollectionViewTableViewCell.swift */,
+				EC79DFA3299258260089DF03 /* MovieCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EC79DFA5299266030089DF03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC79DFA6299266260089DF03 /* MainHeroHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,6 +202,9 @@
 			dependencies = (
 			);
 			name = "NetflixApp-MVMM";
+			packageProductDependencies = (
+				EC79DF9C2991AA800089DF03 /* SnapKit */,
+			);
 			productName = "NetflixApp-MVMM";
 			productReference = EC79DF72299154150089DF03 /* NetflixApp-MVMM.app */;
 			productType = "com.apple.product-type.application";
@@ -200,6 +233,9 @@
 				Base,
 			);
 			mainGroup = EC79DF69299154150089DF03;
+			packageReferences = (
+				EC79DF9B2991AA800089DF03 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = EC79DF73299154150089DF03 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,9 +264,13 @@
 			files = (
 				EC79DF98299167300089DF03 /* SearchViewController.swift in Sources */,
 				EC79DF7A299154150089DF03 /* MainTabBarController.swift in Sources */,
+				EC79DFA02991B3270089DF03 /* CollectionViewTableViewCell.swift in Sources */,
 				EC79DF76299154150089DF03 /* AppDelegate.swift in Sources */,
 				EC79DF9A299167510089DF03 /* DownloadViewController.swift in Sources */,
+				EC79DFA2299245D40089DF03 /* CGFloat+Extension.swift in Sources */,
 				EC79DF78299154150089DF03 /* SceneDelegate.swift in Sources */,
+				EC79DFA7299266260089DF03 /* MainHeroHeaderView.swift in Sources */,
+				EC79DFA4299258260089DF03 /* MovieCollectionViewCell.swift in Sources */,
 				EC79DF962991671E0089DF03 /* UpcomingViewController.swift in Sources */,
 				EC79DF94299167050089DF03 /* HomeViewController.swift in Sources */,
 			);
@@ -440,6 +480,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC79DF9B2991AA800089DF03 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC79DF9C2991AA800089DF03 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC79DF9B2991AA800089DF03 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC79DF6A299154150089DF03 /* Project object */;
 }
